@@ -1,0 +1,37 @@
+%**************************************************************
+% Indici
+%**************************************************************
+\newpage
+\cleardoublepage
+\pdfbookmark{\contentsname}{tableofcontents}
+\setcounter{tocdepth}{2}
+\tableofcontents
+%\markboth{\contentsname}{\contentsname} 
+\clearpage
+
+\newpage
+\begingroup 
+    \let\clearpage\relax
+    \let\cleardoublepage\relax
+    \let\cleardoublepage\relax
+    %*******************************************************
+    % Elenco delle figure
+    %*******************************************************    
+    \phantomsection
+    \pdfbookmark{\listfigurename}{lof}
+    \listoffigures
+
+    \vspace*{8ex}
+\newpage
+    %*******************************************************
+    % Elenco delle tabelle
+    %*******************************************************
+    \newpage
+    \phantomsection
+    \pdfbookmark{\listtablename}{lot}
+    \listoftables
+        
+    \vspace*{8ex}
+\endgroup
+
+\cleardoublepage
