@@ -1,4 +1,46 @@
 \newpage
 %**************************************************************
-\chapter{Tecnologie utilizzate}
+\chapter{Il Progetto}
 \label{cap:descrizione-stage}
+
+\section{\app}
+
+\app è un applicativo per dispositivi mobile che permette, alla rete di assistenza, la gestione sia dei rapporti di lavoro presso la clientela sia del parco macchine installato. I documenti emessi dall'applicativo sono firmabili mediante la firma elettronica avanzata che rende evitabile la loro riproduzione su carta, inoltre l'applicativo sincronizza i documenti con una repository\ped{G} documentale situata nel server.
+
+\subsection{Scopo dell'applicativo}
+Le aziende che offrono un servizio di assistenza per i loro clienti spesso si trovano nella condizione di compilare manualmente su carta un documento che attesta il lavoro svolto presso il cliente. Il documento cartaceo generalmente richiede la firma del tecnico che ha eseguito la prestazione e la firma del cliente che convalida quanto scritto dal tecnico.
+La documentazione cartacea, oltre al fatto che deve essere stampata e compilata a mano, porta con se una gestione burocratica per archiviazione, immissione in un gestionale o altro.
+Un aiuto che si potrebbe dare a queste aziende consiste nel fornire loro di una applicazione su smartphone o tablet, che permetta di inserire dei dati relativi alla prestazione eseguita e di produrre un documento elettronico, da inviare via mail al cliente (o attraverso piattaforme di comunicazione mobile tipo whatsapp o telegram).
+L'obiettivo è realizzare una app fruibile su tutti i sistemi mobile (Android iOS, Windows Phone)che permetta, alla rete di assistenza, la gestione sia dei rapporti di lavoro presso la clientela sia del parco macchine installato.
+
+\subsubsection{Funzionalità di base}
+\begin{itemize}
+	\item Indicazione dei parametri obbligatori per l'emissione del documento elettronico.
+	\item Emissione del documento elettronico
+	\item Servizi REST che espongono i dati necessari all'applicazione
+	\item Sincronizzazione dei dati necessari alla produzione del documento
+\end{itemize}
+\subsubsection{Funzionalità avanzate}
+\begin{itemize}
+	\item Sincronizzazione intelligente dei dati, dove ciò che transita è solo ciò che effettivamente è stato modificato.
+	\item Trasmissione del documento elettronico e dei metadati associati ad un repository\ped{G} documentale.
+	\item Integrazioni con funzioni di trasmissione del dispositivo mobile.
+	\item Firma elettronica avanzata del documento
+\end{itemize}
+
+\section{Tecnologie}
+\subsection{Dispositivi Mobile}
+Per realizzare l'applicazione per dispositivi mobile è stato usato Xamarin, che permette la realizzazione di applicazioni multi-piattaforma, in particolare è stato utilizzato Xamarin.Forms Portable che permette di condividere la stessa interfaccia grafica su tutti i dispositivi.
+\subsubsection{Xamarin.Forms}
+Xamarin.Forms è un framework\ped{G} rilasciato da Xamarin nel 2014; permette di sviluppare UI\ped{G} che possono essere condivise fra Android, iOS e Windows Phone. Le interfacce condivise vengono renderizzate usando controlli nativi della piattaforma utilizzata, consentendo ad applicazioni Xamarin.Forms di mantenere il \textit{'look and feel'} appropriato al dispositivo in uso.
+\\
+Le applicazioni Xamarim.Forms sono viste come native dai dispositivi e consentono di usare qualsiasi API\ped{G} o proprietà della piattaforma, rendendo possibile la creazione di applicazioni con parte della UI\ped{G} strutturata con Xamarin.Forms ed altre parti create usando gli strumenti UI\ped{G} nativi.
+\\
+Xamarin.Forms usa gli stessi approcci delle applicazioni multi-piattaforma tradizionali, sfruttando librerie portatili o progetti condivisi quali contenitori di codice condiviso, per poi creare applicativi specifici per ogni piattaforma basati sullo stesso codice.
+\subsubsection{XSLT}
+\subsection{Server e Comunicazione}
+
+\subsection{Web Service RESTfull}
+
+\section{Mockup}
+

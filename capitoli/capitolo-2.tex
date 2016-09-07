@@ -153,7 +153,7 @@ L'obiettivo dello stage era la creazione di un applicativo mobile, multi-piattaf
 \\
 Mi è stato richiesto inoltre di sviluppare dei servizi che espongono i dati necessari all'applicazione e di realizzare una sincronizzazione intelligente dei dati, dove ciò che transita è solo ciò che effettivamente è stato modificato. 
 \\
-Per la realizzazione dell'applicazione cross-platform mi è stato richiesto l'uso del framework \textbf{Xamarin.Forms}, un framework per lo sviluppo multi-piattaforma che fornisce varie API per l'applicazione della CLI negli applicativi mobili sfruttando il framework .NET, e consente sopratutto di sviluppare UI\ped{G} (User Interfaces) che possono essere condivise tra dispositivi Android, iOS Windows Phone, traducendo a runtime il codice condiviso in codice nativo.
+Per la realizzazione dell'applicazione cross-platform mi è stato richiesto l'uso del framework \textbf{Xamarin.Forms}, un framework per lo sviluppo multi-piattaforma che fornisce varie API per l'applicazione della CLI negli applicativi mobili sfruttando il framework .NET, e consente sopratutto di sviluppare UI\ped{G} (User Interfaces) che possono essere condivise tra dispositivi Android, iOS e Windows Phone, traducendo a runtime il codice condiviso in codice nativo.
 
 \begin{figure}[ht]
 	\centering
@@ -161,8 +161,23 @@ Per la realizzazione dell'applicazione cross-platform mi è stato richiesto l'us
 	\caption{\textit{Differenza di approccio tra Xamarin e Xamarin.Forms}}
 \end{figure}\FloatBarrier
 
+Mi è stato richiesto anche di valutare alcuni modi per gestire la realizzazione di un pdf esclusivamente nel dispositivo mobile a partire da un template\ped{G}, senza creare il documento direttamente via codice. Questa scelta è stata accordata per garantire una elevata manutenibilità del software, che in caso di variazioni del rapportino da emettere, rende semplice la modifica del template.
+\\
+Sono state valutate varie librerie commerciali per la generazione del pdf a partire da un template, ma nessuna offriva realmente ciò che interessava all'azienda, pertanto si è deciso di puntare in un template XSLT che a partire da un XML con associato un foglio di stile, permette la generazione di una pagina HTML che a sua volta sarà convertita in pdf grazie alle funzionalità offerte da pacchetto iTextSharp.
+
 \subsection{Vincoli del progetto di stage}
 Una volta inserito come membro del Team di sviluppo di ASI, mi è stato chiesto di seguire le direttive di sviluppo dei software aziendali, che si ricollegano alle norme di scrittura del codice definite da Microsoft per lo sviluppo .NET.
+
+\subsection{Impostazione del lavoro}
+Il lavoro da svolgere durante lo stage è suddiviso in \textbf{fasi},che sono state introdotte in varie Task dal tutor aziendale ed assegnate di volta in volta al mio profilo dallo Scrum Master del Team di sviluppo, alla Pianificazione di ogni Sprint.
+\begin{itemize}
+	\item[I.] La prima fase è stata dedicata alle conoscenze generali per approfondire le conoscenze del .NET Framework 4.5 e familiarizzare con gli strumenti integrati in Visual Studio, quali TFS, Testing e Continuous integration.
+	\item[II.] La seconda fase è stata dedicata all'acquisizione degli standard aziendali, la lettura del manuale di sviluppo contenente le direttive imposte per la coerenza dell'interfaccia grafica e l'architettura delle applicazioni Plain.
+	\item[III.] La terza fase è stata dedicata alla formazione sugli strumenti e sui metodi per raggiungere gli obiettivi fissati. Durante questa periodo formativo ho appreso l'utilizzo di Xamarin.Forms e analizzato i vari metodi per la generazione di documenti elettronici in formato pdf nei dispositivi mobile.
+	\item[VI.] La quarta fase è stata dedicata all'analisi dei requisiti ||*|| AGGIORNARE ||*||
+	\item[V.]
+	\item[VI.]
+\end{itemize}
 
 
 
