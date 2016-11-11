@@ -124,32 +124,33 @@ I componenti dell'applicazione \app sono i componenti imposti dal \textit{design
 			\includegraphics[scale=0.35]{immagini/progettazione/plainrap_portable.jpg}
 			\caption{\textit{Componenti Plain.Rap.Mobile}}
 		\end{figure}\FloatBarrier
-		
-		\begin{figure}[ht]
-			\centering
-			\includegraphics[scale=0.35]{immagini/progettazione/Models.jpg}
-			\caption{\textit{Componente Model Plain.Rap.Mobile}}
-		\end{figure}\FloatBarrier
-		
-		\begin{figure}[ht]
-			\centering
-			\includegraphics[scale=0.35]{immagini/progettazione/plainrap_view.jpg}
-			\caption{\textit{Componente View Plain.Rap.Mobile}}
-		\end{figure}\FloatBarrier
-		
-		\begin{figure}[ht]
-			\centering
-			\includegraphics[scale=0.35]{immagini/progettazione/plainrap_viewmodel.jpg}
-			\caption{\textit{Componente ViewModel Plain.Rap.Mobile}}
-		\end{figure}\FloatBarrier
 
 \section{Strumenti utilizzati}
 \subsection{Ambiente di sviluppo}
+Per sviluppare l'applicativo è stato utilizzato l'ambiente di sviluppo \textit{Visual Studio\ped{G}}, in quanto è l' \textit{IDE\ped{G}} standard impiegato da \asi.
+
 \subsection{Pacchetti NuGet}
-\subsection{SQLite.Net}
-\subsection{Newtonsoft.Json}
-\subsection{iTextSharp}
-\subsection{MVVMLight}
+NuGet èun gestoredi pacchetti per le piattaforme di sviluppo \textit{Microsoft\ped{G}} e \textit{.NET\ped{G}}, i pacchetti NuGet contengono librerie o strumenti che forniscono funzionalità indipendenti dal progetto in cui possono essere applicate, ogni pacchetto NuGetcontiene i file da copiare ed un manifesto che ne spiega i contenuti e definisce come aggiungerlo o rimuoverlo.
+\\
+Quando si vuole installare un pacchetto, NuGet copia i file nella soluzione e automaticamente aggiorna i riferimenti. Alla rimozione, NuGet rimuove i file ed i riferimenti assegnati all'installazione, pulendo di fatto il progetto.
+
+\subsubsection{SQLite.Net}
+Questo pacchetto NuGet installa nel progetto le funzionalità necessarie alla creazione e gestione di un database \textit{SQLite\ped{G}} consentendo anche l'accesso asincrono ai dati, per non bloccare l'applicativo durante tali operazioni.
+\\
+Il pacchetto è stato usato per gestire il database locale all'interno del dispositivo, inserito in ogni piattaforma, e richiamato tramite \textit{Dependency Service\ped{G}}.
+
+\subsubsection{Newtonsoft.Json}
+Questo pacchetto offre un semplice \textit{framework\ped{G}} per la \textit{serializzazione} e la \textit{deserializzazione} di documenti in formato \textit{.json\ped{G}} da oggetti del model.
+\\
+La necessità di utilizzare il formato \textit{.json} è data dalla funzionalità di sincronizzazione, che avviene attraverso dei servizi \textit{REST\ped{G}} esposti da un servizio creato ad hoc.
+
+\subsubsection{iTextSharp}
+La conversione in \textit{PDF\ped{G}} dopo la trasformata \textit{XSLT\ped{G}} avviene grazie le funzionalità fornite da questo pacchetto, nella sua versione apposita per \textit{Xamarin\ped{G}}. Attualmente il \textit{parser\ped{G}} per la trasformata è obsoleto, ecludendo di fatto alla piena potenzialità del template \textit{XSLT}
+
+\subsubsection{MVVMLight}
+Questo pacchetto, sviluppato da \textit{GalaSoft\ped{G}}, aiuta lo sviluppo su \textit{design pattern\ped{G}} architetturale \textit{Model-View-ViewModel\ped{G}}, fornendo un sistema pronto di locazione dei \textit{ViewModel\ped{G}} e un sistema di messaggistica per diminuire la dipendenza tra classi.
+
 \subsection{Emulator Android for Visual Studio}
+Per il \textit{Debug\ped{G}} durante lo sviluppo è stato utilizzato un emulatore \textit{Android\ped{G}} sviluppato per \textit{Visual Studio\ped{G}}. L'emulatore presenta una grossa comodità, sopratutto per la varietà di configurazioni possibili in termini di \textit{HArdware\ped{G}} e di versione di \textit{Sistema operativo\ped{G}}.
 
 

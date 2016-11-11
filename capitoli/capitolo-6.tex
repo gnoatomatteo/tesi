@@ -1,4 +1,59 @@
 \newpage
 %**************************************************************
-\chapter{Verifica e validazione}
-\label{cap:verifica-validazione}
+\chapter{Funzionalità ottenute}
+\label{cap:funzionalità-ottenute}
+Come definito negli obiettivi dello stage, il prototipo ottenuto incorpora le funzioni di \app fruibili attraverso apparecchi \textit{Android\ped{G}} e \textit{iOS\ped{G}}, fornendo le seguenti funzionalità:
+
+\paragraph{Identificazione}
+Per l'uso online dell'applicativo è necessaria l'identificazione del'utente con un account creato direttamente lato \textit{server\ped{G}}. Per passare alla modalità operativa l'utente dunque deve inserire il proprio username e la propria password (fornita dall'azienda).
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.35]{immagini/ui/001_mockup.jpg}
+	\caption{\textit{Pagina di identificazione}}
+\end{figure}\FloatBarrier
+
+\paragraph{Configurazione manuale}
+Per l'uso esclusivamente offline l'applicativo prevede una configurazione manuale. L'utente dunque, senza avere un account, può inserire le informazioni necessarie per il funzionamento del'applicazione.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.35]{immagini/ui/002_mockup.jpg}
+	\caption{\textit{Pagina di configurazione manuale}}
+\end{figure}\FloatBarrier
+
+\paragraph{Ricerca documenti}
+L'applicazione permette la consultazione (dunque la visualizzazione di un pdf) dei documenti creati mediante l'uso del'applicazione.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.35]{immagini/ui/003_HomePage_Find_NoSelected.jpg}
+	\caption{\textit{Pagina di ricerca documenti}}
+\end{figure}\FloatBarrier
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.35]{immagini/ui/004_NoResult_utente.jpg}
+	\caption{\textit{Pagina di ricerca documenti, senza risultati}}
+\end{figure}\FloatBarrier
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.35]{immagini/ui/005_ordina_filtra.jpg}
+	\caption{\textit{Pagina di ricerca documenti, selezione dei filtri di ricerca}}
+\end{figure}\FloatBarrier
+
+\paragraph{Inserimento clienti}
+L'applicazione prevede due modi per l'inserimento di anagrafiche di clienti:
+\begin{itemize}
+	\item \textbf{Inserimento manuale:} avviene se l'utente non ha un account e usa l'applicativo esclusivamente offline. In questo caso le informazioni sui clienti sono inserite mediante una comoda \textit{view} dedicata. 
+	\item \textbf{Inserimento automatico:} avviene se l'utente ha un account e usa l'applicativo sia offline che online. In questo caso le anagrafiche sono automaticamente aggiunte mediante la sincronizzazione con il servizio remoto, configurate tramite l'applicazione \textit{server\ped{G}}.
+\end{itemize}
+
+\paragraph{Inserimento articoli}
+L'applicazione prevede, come per le anagrafiche dei clienti, due metodi per inserire gli articoli che possono essere aggiunti nei rapportini:
+\begin{itemize}
+	\item \textbf{Inserimento manuale:} avviene se l'utente non ha un account e usa l'applicativo esclusivamente offline. In questo caso le informazioni sugli articoli sono inserite mediante una comoda \textit{view} dedicata. non c'è possibilità di associare determinati articoli a clienti specifici senza un account.
+	\item \textbf{Inserimento automatico:} avviene se l'utente ha un account e usa l'applicativo sia offline che online. In questo caso gli articoli sono automaticamente aggiunti mediante la sincronizzazione con il servizio remoto, configurate tramite l'applicazione \textit{server\ped{G}}. Inoltre, gli articoli sono associati a determinati clienti, in modo da poter essere proposti, durante la creazione del rapportino, solamente quando viene selezionato un determinato cliente.
+\end{itemize}
+
+\paragraph{Creazione rapportino}
+L'applicazione permette l'inserimento dei dati necessari per la creazione di un documento elettronico. Il layout del documento generato varia a seconda del file \textit{XSLT\ped{G}}. Infatti durante la sincronizzazione l'applicazione scarica il template predisposto. In caso di utilizzo del'applicazione senza un account, il template è standard e non modificabile. 
