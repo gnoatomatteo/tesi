@@ -1,0 +1,212 @@
+\newpage
+%**************************************************************
+\chapter{Requisiti}
+\label{cap:Requisiti}
+
+
+	\begin{longtable}{||p{1,5cm} p{10.55cm}||} 
+		\hline
+		\textbf{ID} & \textbf{Requisito} \\\toprule 
+		\hline\hline
+		1		 & L’utente può configurare il proprio profilo nell’applicazione  \\ 
+		1.1		 & L’utente può inserire il proprio nome \\
+		1.2 	 & L’utente può inserire il proprio cognome \\
+		1.3		 & L’utente può inserire il proprio indirizzo \\
+		1.3.1	 & L’utente può inserire la propria via \\
+		1.3.2	 & L’utente può inserire il proprio cap. \\
+		1.3.3	 & L’utente può inserire la propria città \\
+		1.4		 & L’utente può inserire il numero di cellulare \\
+		1.5		 & L’utente può inserire il numero di telefono \\
+		1.6		 & L’utente può inserire la propria mail \\
+		1.7		 & L’utente può inserire le proprie qualifiche \\
+		\hline
+		2 & L’utente può identificarsi all’interno dell’applicazione con le credenziali che gli sono state fornite  \\
+		2.1 & L’utente può inserire il proprio nome utente \\
+		2.2 & L’utente può inserire la propria password associata al proprio nome utente \\
+		2.3 & L’utente può confermare la propria autenticazione \\
+		\hline
+		3 & L’utente può inserire un nuovo cliente \\
+		3.1 & L’utente può inserire il nome del nuovo cliente\\
+		3.2 & L’utente può inserire l’indirizzo del nuovo cliente\\
+		3.2.1 & L’utente può inserire la via del nuovo cliente\\
+		3.2.2 & L’utente può inserire il numero civico del nuovo cliente\\
+		3.2.3 & L’utente può inserire la città del nuovo cliente\\
+		3.2.4 & L’utente può inserire il cap. del nuovo cliente\\
+		3.2.5 & L’utente può inserire la provincia del nuovo cliente\\
+		3.3 & L’utente può confermare l’inserimento del cliente\\
+		\hline
+		4 & L’utente identificato non può aggiungere un nuovo cliente e aggiungere articoli perché li scarica da un servizio predisposto \\
+		\hline
+		5 &  L’utente e l’utente identificato possono ricercare i rapportini\\
+		5.1 & L’utente e l’utente identificato possono inserire una stringa di ricerca\\
+		5.2 & L’utente e l’utente identificato possono confermare la ricerca\\
+		5.3 & L’utente e l’utente identificato possono scegliere una ricerca rapida proposta dal sistema\\
+		5.3.1 & L’utente e l’utente identificato possono scegliere la ricerca di tutti i rapportini\\
+		5.3.2 & L’utente e l’utente identificato possono scegliere la ricerca di tutti i rapportini non conclusi (default quando viene visualizzata la home page)\\
+		5.3.3 & L’utente e l’utente identificato possono scegliere la ricerca di tutti i rapportini creati nel mese corrente\\
+		5.3.4 & L’utente e l’utente identificato possono scegliere la ricerca di tutti i rapportini creati nella giornata corrente\\ 
+		\hline
+		6 & L’utente e l’utente identificato possono visualizzare e modificare i rapportini generati in precedenza in stato di “non concluso” che verranno visualizzati in una lista come ricerca standard (quindi senza che l’utente effettui una reale ricerca)\\
+		\hline
+		7 & L’utente può creare un nuovo rapportino\\
+		7.1 & L’utente può selezionare la propria qualifica nella mansione\\
+		7.2 & L’utente può selezionare un cliente\\
+		7.3 & L’utente può inserire un cliente se non è già presente, quest’ultimo verrà salvato come nuovo cliente\\
+		7.4 & L’utente può inserire una locazione diversa dalla sede del cliente\\
+		7.4.1 & L’utente può inserire la ragione sociale del cliente\\
+		7.4.2 & L’utente può inserire l’indirizzo del cliente\\
+		7.4.2.1 & L’utente può inserire la via del cliente\\
+		7.4.2.2 & L’utente può inserire il numero civico del cliente\\
+		7.4.2.3 & L’utente può inserire il cap. del cliente \\
+		7.4.2.4 & L’utente può inserire la città del cliente\\
+		7.4.2.5 & L’utente può inserire la provincia del cliente\\
+		7.5 & L’utente può inserire l’orario mattutino\\
+		7.5.1 & L’utente può inserire l’orario di arrivo mattutino\\
+		7.5.2 & L’utente può inserire l’orario di partenza mattutino\\
+		7.6 & L’utente può inserire l’orario pomeridiano\\
+		7.6.1 & L’utente può inserire l’orario di arrivo pomeridiano\\
+		7.6.2 & L’utente può inserire l’orario di partenza pomeridiano\\
+		7.7 & L’utente può inserire le ore di viaggio\\
+		7.8 & L’utente può inserire i chilometri percorsi\\
+		7.9 & L’utente può inserire il costo dell’autostrada\\
+		7.10 & L’utente può inserire il costo del parcheggio\\
+		7.11 & L’utente può inserire il costo dei pasti\\
+		7.12 & L’utente può inserire il costo di pernottamento\\
+		7.13 & L’utente può inserire un articolo\\
+		7.13.1 & L’utente può inserire una descrizione dell’articolo\\
+		7.13.2 & L’utente può inserire il tempo parziale di un articolo\\
+		7.13.3 & L’utente può inserire il tempo totale di un articolo\\
+		7.14 & L’utente può confermare la creazione del rapportino\\
+		\hline
+		8 & L’utente identificato può creare un nuovo rapportino\\
+		8.1 & L’utente identificato può selezionare la propria qualifica nella mansione\\
+		8.2 & L’utente identificato può selezionare un cliente\\
+		8.3 & L’utente identificato può inserire un cliente se non è presente nella sua anagrafica\\
+		8.4 & L’utente identificato può inserire una locazione diversa dalla sede del cliente\\
+		8.4.1 & L’utente identificato può inserire la ragione sociale del cliente\\
+		8.4.2 & L’utente identificato può inserire l’indirizzo del cliente\\
+		8.4.2.1 & L’utente identificato può inserire la via del cliente\\
+		8.4.2.2 & L’utente identificato può inserire il numero civico del cliente\\
+		8.4.2.3 & L’utente identificato può inserire il cap. del cliente \\
+		8.4.2.4 & L’utente identificato può inserire la città del cliente\\
+		8.4.2.5 & L’utente identificato può inserire la provincia del cliente\\
+		8.5 & L’utente identificato può inserire l’orario mattutino\\
+		8.6 & L’utente identificato può inserire l’orario pomeridiano\\
+		8.7 & L’utente identificato può selezionare le ore di viaggio\\
+		8.8 & L’utente identificato può inserire i chilometri percorsi\\
+		8.9 & L’utente identificato può inserire il costo dell’autostrada\\
+		8.10 & L’utente identificato può inserire il costo del parcheggio\\
+		8.11 & L’utente identificato può inserire il costo dei pasti\\
+		8.12 & L’utente identificato può inserire il costo di pernottamento\\
+		8.13 & L’utente identificato può selezionare un articolo\\
+		8.14 & L’utente identificato può confermare la creazione del rapportino\\
+		\hline
+		9 & L’utente può modificare il rapportino trovato se non è in stato ‘concluso’\\
+		9.1 & L’utente può cambiare il cliente del rapportino\\
+		9.2 & L’utente può cambiare l’orario mattutino del rapportino\\
+		9.2.1 & L’utente può cambiare l’ora di arrivo mattutino\\
+		9.2.2 & L’utente può cambiare l’ora di partenza mattutina\\
+		9.3 & L’utente può cambiare l’orario pomeridiano del rapportino\\
+		9.3.1 & L’utente può cambiare l’ora di arrivo pomeridiana\\
+		9.3.2 & L’utente può cambiare l’ora di partenza pomeridiana\\
+		9.4 & L’utente può cambiare la locazione dell’intervento\\
+		9.4.1 & L’utente può cambiare la via del cliente\\
+		9.4.2 & L’utente può cambiare il numero civico del cliente \\
+		9.4.3 & L’utente può cambiare il cap. del cliente\\
+		9.4.4 & L’utente può cambiare la città del cliente\\
+		9.4.5 & L’utente può cambiare la provincia del cliente\\
+		9.5 & L’utente può cambiare le ore di viaggio\\
+		9.6 & L’utente può cambiare i chilometri percorsi\\
+		9.7 & L’utente può cambiare il costo dell’autostrada\\
+		9.8 & L’utente può cambiare il costo del parcheggio\\
+		9.9 & L’utente può cambiare il costo dei pasti\\
+		9.10 & L’utente può cambiare il costo di pernottamento\\
+		9.11 & L’utente può cambiare un articolo inserito nel rapportino\\
+		9.11.1 & L’utente può scegliere un nuovo articolo da sostituire a quello esistente\\ 
+		9.12 & L’utente può modificare un articolo inserito nel rapportino\\
+		9.12.1 & L’utente può modificare la descrizione dell’articolo\\
+		9.12.2 & L’utente può modificare il tempo parziale dell’articolo\\
+		9.13 & L’utente può inserire un nuovo articolo nel rapportino che sta modificando\\
+		9.14 & L’utente può rimuovere un articolo presente nel rapportino che sta modificando\\
+		9.15 & L’utente può confermare le modifiche apportate\\
+		9.16 & L’utente può annullare le modifiche apportate\\	
+		\hline
+		10 & L’utente identificato può modificare il rapportino trovato se non è in stato ‘concluso’\\
+		10.1 & L’utente identificato può cambiare l’orario mattutino del rapportino\\
+		10.1.1 & L’utente identificato può cambiare l’ora di arrivo mattutino\\
+		10.1.2 & L’utente identificato può cambiare l’ora di partenza mattutina\\
+		10.2 & L’utente identificato può cambiare l’orario pomeridiano del rapportino\\
+		10.2.1 & L’utente identificato può cambiare l’ora di arrivo pomeridiana\\
+		10.2.2 & L’utente identificato può cambiare l’ora di partenza pomeridiana\\
+		10.3 & L’utente identificato può cambiare le ore di viaggio standard\\
+		10.3.1 & L’utente identificato può impostare le ore di viaggio standard\\
+		10.3.2 & L’utente identificato può impostare l’inserimento manuale delle ore di viaggio\\
+		10.4 & L’utente identificato può cambiare i chilometri percorsi\\
+		10.4.1 & L’utente identificato può impostare i chilometri trascorsi standard\\
+		10.4.2 & L’utente identificato può impostare l’inserimento manuale dei chilometri trascorsi\\
+		10.5 & L’utente identificato può cambiare il costo dell’autostrada\\
+		10.6 & L’utente identificato può cambiare il costo del parcheggio\\
+		10.7 & L’utente identificato può cambiare il costo dei pasti\\
+		10.8 & L’utente identificato può cambiare il costo di pernottamento\\
+		10.9 & L’utente identificato può cambiare un articolo inserito nel rapportino\\
+		10.9.1 & L’utente identificato può scegliere un nuovo articolo da sostituire a quello esistente\\
+		10.10 & L’utente identificato può modificare un articolo inserito nel rapportino\\
+		10.10.1 & L’utente identificato può modificare la descrizione dell’articolo\\
+		10.10.2 & L’utente identificato può modificare il tempo parziale dell’articolo\\
+		10.10.3 & L’utente identificato può modificare il tempo parziale dell’articolo\\
+		10.11 & L’utente identificato può inserire un nuovo articolo nel rapportino che sta modificando\\
+		10.12 & L’utente identificato può rimuovere un articolo presente nel rapportino che sta modificando\\
+		10.13 & L’utente identificato può confermare le modifiche apportate\\
+		10.14 & L’utente identificato può annullare le modifiche apportate\\
+		\hline
+		11 & L’utente può eliminare il rapportino trovato\\
+		11.1 & L’utente può confermare la rimozione del rapportino\\
+		\hline
+		12 & L’utente identificato può eliminare un rapportino da lui creato, ma lo rimuove solo a livello logico nel database locale (resta dunque in coda per l’invio al server o nel database remoto)\\
+		12.1 & L’utente identificato può confermare la rimozione del rapportino\\
+		\hline
+		13 & L’utente può inviare un rapportino, via mail o con applicazioni di messaggistica istantanea\\
+		\hline
+		14 & L’utente identificato può inviare il rapportino se il rapportino è in stato di ‘concluso’, via mail o con applicazioni di messaggistica istantanea\\
+		\hline
+		15 & L’utente e l’utente identificato possono visualizzare il rapportino trovato\\
+		15.1 & L’utente e l’utente identificato possono visualizzare le informazioni del rapportino \\
+		\hline
+		16 & L’utente può firmare il rapportino trovato se non è in stato di ‘concluso’, aprendolo con un’applicazione esterna \\
+		\hline
+		17 & L’utente può segnalare come ‘concluso’ un rapportino ‘non concluso’\\
+		\hline
+		18 & Il cliente può firmare un documento, aprendolo con una applicazione esterna\\
+		\hline
+		19 & L’utente identificato può forzare la sincronizzazione dell’applicazione\\
+		\hline
+		20 & L’utente identificato, per motivi di sicurezza, può bloccare l’applicazione fino all’inserimento delle password\\
+		\hline
+		21 & L’utente identificato può sbloccare l’applicazione inserendo la propria password\\
+		\hline
+		22 & L’utente identificato può richiedere il recupero della propria password\\
+		\hline
+		23 & L’utente può visualizzare le informazioni sull’ applicazione\\
+		\hline
+		24 & L’applicazione ricerca i rapportini non conclusi in automatico e li propone all’utente quando non ha eseguito una ricerca più specifica\\
+		\hline
+		25 & L’applicazione di occupa di gestire le liste di articoli che l’utente identificato può inserire nei rapportini\\
+		\hline
+		26 & L’applicazione deve sincronizzare il proprio database locale con un servizio remoto\\
+		26.1 & L’applicazione deve sincronizzarsi da un servizio predisposto\\
+		26.1.1 & L’applicazione deve scaricare i dati da un servizio predisposto\\
+		26.1.2 & L’applicazione deve trasmettere il documento ad un server predisposto a riceverlo\\
+		26.1.3 & L’applicazione sincronizza i clienti dal servizio predisposto \\
+		26.1.4 & L’applicazione sincronizza i rapportini dal servizio predisposto\\
+		26.1.5 & L’applicazione sincronizza gli articoli disponibili dal servizio predisposto\\
+		\hline
+		27 & L’applicazione permette l’invio di un documento\\
+		27.1 & L’applicazione permette l’invio di un documento tramite e-mail\\
+		27.1.1 & L’applicazione accede all’applicazione predefinita per l’invio della mail del dispositivo preparando una mail con allegato\\
+		27.2 & L’applicazione permette l’invio di un documento tramite servizi di messaggistica istantanea\\
+		27.2.1 & L’applicazione permette l’invio di un documento tramite whatsapp\\
+		27.2.2 & L’applicazione permette l’invio di un documento tramite telegram\\
+		\hline
+		28 & L’applicazione mette a disposizione un tutorial per guidare l’utente all’utilizzo dell’applicazione\\
+		\hline
+\end{longtable}

@@ -9,7 +9,7 @@ Le applicazioni Xamarin.Forms sono viste come native dai dispositivi e consenton
 Per creare le \textit{UI\ped{G}} in Xamarin.Forms sono stati due approcci:
 \begin{itemize}
 	\item \textbf{Codice C\#}: si utilizzano le ricche \textit{API\ped{G}} provviste da Xamarin.Forms per creare interamente le \textit{UI\ped{G}}
-	\item \textbf{XAML}: un linguaggio dichiaritivo di \textit{Markup\ped{G}} di \textit{Microsoft\ped{G}}, che definisce l'\textit{interfaccia\ped{G}} su un file \textit{XML\ped{G}} usando sintassi XAML, mentre il comportamento in runtime è definito da un file separato.
+	\item \textbf{XAML}: un linguaggio dichiarativo di \textit{Markup\ped{G}} di \textit{Microsoft\ped{G}}, che definisce l'\textit{interfaccia\ped{G}} su un file \textit{XML\ped{G}} usando sintassi XAML, mentre il comportamento in runtime è definito da un file separato.
 \end{itemize}
 Per il progetto è stato scelto l'utilizzo di \textit{XAML\ped{G}}, vista la scelta di utilizzare un \textit{Design Pattern\ped{G}} architetturale \textit{Model View ViewModel\ped{G}}. Infatti, questo \textit{Design Pattern\ped{G}} permette la separazione totale tra modello di dati, comportamento e vista dell'applicazione, e l'uso di un linguaggio di \textit{Markup\ped{G}} lo sposa appieno, permettendo di fatto il \textit{Two-way Data-Binding\ped{G}} che sarà discusso in seguito.
 \subsection{Tipologia di condivisione del codice}
@@ -37,7 +37,7 @@ Tuttavia i problemi possono essere parzialmente risolti sfruttando il \textit{De
 \subsubsection{Shared project}
 Contrariamente agli altri approcci, un progetto condiviso non risulta inserito nella creazione di una \textit{DLL\ped{G}}; il codice viene invece compilato in ciascun progetto che lo referenzia, facendo in modo che ogni progetto condiviso referenziato venga compilato come se fosse dello stesso.
 \\
-Un progetto consiviso può contenere direttiveche ne disabilitano alcune sezioni, secondo la piattaforma su cui viene eseguito il codice.
+Un progetto condiviso può contenere direttive che ne disabilitano alcune sezioni, secondo la piattaforma su cui viene eseguito il codice.
 
 \begin{figure}[ht]
 	\centering
@@ -63,7 +63,7 @@ Per la creazione di \textit{UI\ped{G}}, sono fornite \textbf{quattro classi} pri
 		\caption{\textit{Tipi di Page fornite da Xamarin.Forms}}
 	\end{figure}\FloatBarrier
 	
-	\item \textbf{Layout:} sono una specializzazione della classe \textbf{View}; fungono da contenitori per altri \textit{Layout\ped{G}} o controlli e vengono utilizzati per gestireil posizionamento e la dimensione dei contenuti.
+	\item \textbf{Layout:} sono una specializzazione della classe \textbf{View}; fungono da contenitori per altri \textit{Layout\ped{G}} o controlli e vengono utilizzati per gestire il posizionamento e la dimensione dei contenuti.
 	
 		\begin{figure}[ht]
 			\centering
@@ -90,7 +90,7 @@ Xamarin.Forms fornisce un semplice metodo per implementare funzionalità native 
 \begin{itemize}
 	\item \textbf{Interfaccia:} una classe interfaccia nel codice condiviso che definisce le funzionalità che richiedono codice specifico per la piattaforma.
 	\item \textbf{Registrazione:} un'implementazione dell'interfaccia in ogni progetto dell'applicazione, con allegato un attributo che registri la classe in modo che il \textit{Dependency Service\ped{G}} possa crearne istanze.
-	\item \textbf{Locazione:} chiamando il \textit{Dependency Service\ped{G}} nel codice condiviso si ottinene a runtime un'istanza dell'interfaccia definita, consentendo al codice condiviso di accedere alla piattaforma sottostante.
+	\item \textbf{Locazione:} chiamando il \textit{Dependency Service\ped{G}} nel codice condiviso si ottiene a runtime un'istanza dell'interfaccia definita, consentendo al codice condiviso di accedere alla piattaforma sottostante.
 \end{itemize}
 
 \subsection{Design Pattern}
@@ -103,9 +103,9 @@ Il \textit{Model-View-ViewModel\ped{G}} è un \textit{design pattern\ped{G}} arc
 \paragraph{Model}
 Il model è un'implementazione del \textit{domain model\ped{G}} dell'applicazione, il quale include i dati e la loro logica di business e validazione. Questi sono rappresentanti quindi sia da \textit{database\ped{G}} o altri archivi, sia da oggetti di accesso ai dati.
 \paragraph{View}
-La View rappresenta l'interfaccia grafica con cui l'utente interagisce, limitandosi a presentare i dati richiesti ed i controlli necessari per gestirli. La View in \textit{MVVM\ped{G}} è attivae gestiche comportamenti, eventi e \textit{Data-Binding\ped{G}} che richiedono una conoscenza del Model sottostante, solitamente mappandoli a proprietà o comandi.
+La View rappresenta l'interfaccia grafica con cui l'utente interagisce, limitandosi a presentare i dati richiesti ed i controlli necessari per gestirli. La View in \textit{MVVM\ped{G}} è attiva e gestisce comportamenti, eventi e \textit{Data-Binding\ped{G}} che richiedono una conoscenza del Model sottostante, solitamente mappandoli a proprietà o comandi.
 \paragraph{ViewModel}
-Il ViewModel si frappone tra View e Model, occupandosi delle iterazioni tra i due, facendo in modo che il Model non venga influenzato da come la View gestisce i suoi dati ed impedendo alla View una connessione diretta con il Model. Il ViewModel espone metodi, dati e comandi neccessari alla View, rispondendo ai suoi \textit{input\ped{G}} con chiamate ai metodi del Model, traducendone i risultati in formati fruibili e lanciando eventi perché la View li utilizzi. Se il Model viene modificato, invia eventi al ViewModel perché ne rilevi le modifiche e faccia in modo che la View agisca di conseguenza.
+Il ViewModel si frappone tra View e Model, occupandosi delle iterazioni tra i due, facendo in modo che il Model non venga influenzato da come la View gestisce i suoi dati ed impedendo alla View una connessione diretta con il Model. Il ViewModel espone metodi, dati e comandi necessari alla View, rispondendo ai suoi \textit{input\ped{G}} con chiamate ai metodi del Model, traducendone i risultati in formati fruibili e lanciando eventi perché la View li utilizzi. Se il Model viene modificato, invia eventi al ViewModel perché ne rilevi le modifiche e faccia in modo che la View agisca di conseguenza.
 
 		\begin{figure}[ht]
 			\centering
@@ -130,7 +130,7 @@ I componenti dell'applicazione \app sono i componenti imposti dal \textit{design
 Per sviluppare l'applicativo è stato utilizzato l'ambiente di sviluppo \textit{Visual Studio\ped{G}}, in quanto è l' \textit{IDE\ped{G}} standard impiegato da \asi.
 
 \subsection{Pacchetti NuGet}
-NuGet èun gestoredi pacchetti per le piattaforme di sviluppo \textit{Microsoft\ped{G}} e \textit{.NET\ped{G}}, i pacchetti NuGet contengono librerie o strumenti che forniscono funzionalità indipendenti dal progetto in cui possono essere applicate, ogni pacchetto NuGetcontiene i file da copiare ed un manifesto che ne spiega i contenuti e definisce come aggiungerlo o rimuoverlo.
+NuGet è un gestore di pacchetti per le piattaforme di sviluppo \textit{Microsoft\ped{G}} e \textit{.NET\ped{G}}, i pacchetti NuGet contengono librerie o strumenti che forniscono funzionalità indipendenti dal progetto in cui possono essere applicate, ogni pacchetto NuGet contiene i file da copiare ed un manifesto che ne spiega i contenuti e definisce come aggiungerlo o rimuoverlo.
 \\
 Quando si vuole installare un pacchetto, NuGet copia i file nella soluzione e automaticamente aggiorna i riferimenti. Alla rimozione, NuGet rimuove i file ed i riferimenti assegnati all'installazione, pulendo di fatto il progetto.
 
@@ -145,7 +145,7 @@ Questo pacchetto offre un semplice \textit{framework\ped{G}} per la \textit{seri
 La necessità di utilizzare il formato \textit{.json} è data dalla funzionalità di sincronizzazione, che avviene attraverso dei servizi \textit{REST\ped{G}} esposti da un servizio creato ad hoc.
 
 \subsubsection{iTextSharp}
-La conversione in \textit{PDF\ped{G}} dopo la trasformata \textit{XSLT\ped{G}} avviene grazie le funzionalità fornite da questo pacchetto, nella sua versione apposita per \textit{Xamarin\ped{G}}. Attualmente il \textit{parser\ped{G}} per la trasformata è obsoleto, ecludendo di fatto alla piena potenzialità del template \textit{XSLT}
+La conversione in \textit{PDF\ped{G}} dopo la trasformata \textit{XSLT\ped{G}} avviene grazie le funzionalità fornite da questo pacchetto, nella sua versione apposita per \textit{Xamarin\ped{G}}. Attualmente il \textit{parser\ped{G}} per la trasformata è obsoleto, escludendo di fatto alla piena potenzialità del template \textit{XSLT}
 
 \subsubsection{MVVMLight}
 Questo pacchetto, sviluppato da \textit{GalaSoft\ped{G}}, aiuta lo sviluppo su \textit{design pattern\ped{G}} architetturale \textit{Model-View-ViewModel\ped{G}}, fornendo un sistema pronto di locazione dei \textit{ViewModel\ped{G}} e un sistema di messaggistica per diminuire la dipendenza tra classi.
